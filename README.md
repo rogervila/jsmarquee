@@ -1,5 +1,6 @@
 <p align="center"><img width="200" src="https://image.flaticon.com/icons/svg/332/332106.svg" alt="jsmarquee" /></p>
 
+# jsmarquee
 
 ## About
 **jsmarquee** is a pure javascript implementation of the old [HTML marquee tag](https://www.w3docs.com/learn-html/html-marquee-tag.html).
