@@ -1,5 +1,12 @@
 <p align="center"><img width="200" src="https://image.flaticon.com/icons/svg/332/332106.svg" alt="jsmarquee" /></p>
 
+[![Build Status](https://travis-ci.org/rogervila/jsmarquee.svg?branch=master)](https://travis-ci.org/rogervila/jsmarquee)
+[![StyleCI](https://github.styleci.io/repos/234736708/shield?branch=master)](https://github.styleci.io/repos/234736708)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=rogervila_jsmarquee&metric=coverage)](https://sonarcloud.io/dashboard?id=rogervila_jsmarquee)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=rogervila_jsmarquee&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=rogervila_jsmarquee)
+
+[![NPM](https://nodei.co/npm/jsmarquee.png?compact=true)](https://nodei.co/npm/jsmarquee/)
+
 # jsmarquee
 
 ## About
@@ -56,9 +63,10 @@ In order to work correctly this is the basic CSS needed:
 }
 ```
 
-## Demo
+## Demos
 
-*TODO*
+- [CSS only](https://codepen.io/rogervila-1472551995/pen/JjoePwm)
+- [Tailwind](https://codepen.io/rogervila-1472551995/pen/yLyQLQR)
 
 ## License
 
