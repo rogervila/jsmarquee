@@ -1,4 +1,4 @@
-export default class Marquee {
+module.exports = class Marquee {
     constructor(props) {
         this.validate(props)
         this.props = props

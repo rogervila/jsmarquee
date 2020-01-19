@@ -1,16 +1,13 @@
 {
   "name": "jsmarquee",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Javascript Marquee without dependencies",
-  "main": "index.js",
+  "main": "src/marquee.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test jest --coverage",
-    "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "npm run development -- --watch",
-    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "start": "npm run build && npm run minify",
+    "build": "browserify src/marquee.js  --standalone Marquee -o dist/marquee.js -t [ babelify --presets [ @babel/preset-env ] --plugins [ @babel/plugin-transform-classes ] ]",
+    "minify": "uglifyjs dist/marquee.js -o dist/marquee.min.js",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -27,11 +24,13 @@
   },
   "homepage": "https://github.com/rogervila/jsmarquee#readme",
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
     "babel-jest": "^24.9.0",
-    "cross-env": "^6.0.3",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0",
     "jest": "^24.9.0",
-    "laravel-mix": "^5.0.1",
-    "vue-template-compiler": "^2.6.11"
+    "uglify-js": "^3.7.5"
   },
   "jest": {
     "coverageReporters": [

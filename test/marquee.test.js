@@ -1,4 +1,4 @@
-const Marquee = require('../src/marquee.js').default
+const Marquee = require('../src/marquee.js')
 
 describe('Marquee Validation', () => {
     it('should fail if a prop is missing', async () => {
