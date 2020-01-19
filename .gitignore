@@ -107,3 +107,7 @@ dist
 # Library
 package-lock.json
 mix-manifest.json
+
+
+# Jest
+test-report.xml
