@@ -1,0 +1,42 @@
+{
+  "name": "jsmarquee",
+  "version": "1.0.0",
+  "description": "Javascript Marquee without dependencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test jest --coverage",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogervila/jsmarquee.git"
+  },
+  "keywords": [
+    "marquee",
+    "ticker"
+  ],
+  "author": "Roger Vilà <rogervila@me.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rogervila/jsmarquee/issues"
+  },
+  "homepage": "https://github.com/rogervila/jsmarquee#readme",
+  "devDependencies": {
+    "babel-jest": "^24.9.0",
+    "cross-env": "^6.0.3",
+    "jest": "^24.9.0",
+    "laravel-mix": "^5.0.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "jest": {
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ]
+  }
+}

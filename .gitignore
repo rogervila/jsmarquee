@@ -102,3 +102,12 @@ dist
 
 # TernJS port file
 .tern-port
+
+
+# Library
+package-lock.json
+mix-manifest.json
+
+
+# Jest
+test-report.xml
