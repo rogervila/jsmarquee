@@ -17,7 +17,7 @@ export default class Marquee {
             { name: 'velocity', type: 0 }
         ].forEach((valid) => {
             if (!props[valid.name] || typeof props[valid.name] !== typeof valid.type) {
-                throw `"${valid.name}" property is mandatory and must be a type of "${typeof valid.type}"`
+                throw new TypeError(`"${valid.name}" property is mandatory and must be a type of "${typeof valid.type}"`)
             }
         })
     }
