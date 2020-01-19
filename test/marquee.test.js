@@ -40,4 +40,30 @@ describe('Marquee Validation', () => {
             expect(e instanceof TypeError).toBe(true);
         }
     })
+
+    it('should run if html content is correct', async () => {
+        document.body.innerHTML = `<div id="test"><div>content</div></div>`
+
+        const m = new Marquee({
+            element: '#test',
+            velocity: 1
+        })
+
+        m.run()
+    })
+
+    it('should fail if html content is incorrect', async () => {
+        document.body.innerHTML = `<div id="test">missing child element</div>`
+
+        try {
+            const m = new Marquee({
+                element: '#test',
+                velocity: 1
+            })
+
+            m.run()
+        } catch (e) {
+            expect(e.message === `Cannot read property 'style' of null`).toBe(true);
+        }
+    })
 });
