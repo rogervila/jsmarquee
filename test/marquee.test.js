@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 const Marquee = require('../src/marquee.js')
 
 describe('Marquee Validation', () => {
