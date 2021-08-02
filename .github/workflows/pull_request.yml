@@ -1,0 +1,33 @@
+name: pull_request
+
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+        node: ['14', '16']
+
+    name: NodeJS ${{ matrix.node }} - ${{ matrix.os }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2.3.4
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+          # cache: npm
+
+      - name: Update npm
+        run: npm i -g npm@latest
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Execute tests
+        run: npm test
